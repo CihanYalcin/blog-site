@@ -1,24 +1,21 @@
 <%- include("partials/header"); -%>
-   <body>
-      <div id="container">
-         <%- include("partials/navbar"); -%>
-         <main>
-            <form action="/compose" method="post">
-               <div class="mb-3">
-                  <h2>Compose</h2>
-                  <label class="form-label">Title</label>
-                  <input class="form-control" type="text" name="title" />
-                  <label class="form-label">Post</label>
-                  <textarea
-                     class="form-control"
-                     name="post"
-                     rows="10"
-                  ></textarea>
-                     <button class="btn btn-primary" type="submit" name="button">
-                        Publish
-                     </button>
-               </div>
-            </form>
-         </main>
-<%- include("partials/footer"); -%>
-        
+<body>
+   <div id="container">
+      <%- include("partials/navbar"); -%>
+      <main>
+         <form action="/compose" method="post">
+            <div class="mb-3">
+               <h2>Compose</h2>
+               <label class="form-label">Title</label>
+               <input class="form-control" type="text" name="title" />
+               <label class="form-label">Post</label>
+               <textarea class="form-control" name="post" rows="10"></textarea>
+               <button class="btn btn-primary" type="submit" name="button">
+                  Publish
+               </button>
+            </div>
+         </form>
+      </main>
+      <%- include("partials/footer"); -%>
+   </div>
+</body>

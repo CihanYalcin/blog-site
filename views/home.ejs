@@ -1,11 +1,19 @@
 <%- include("partials/header"); -%>
-   <body>
-      <div id="container">
-         <%- include("partials/navbar"); -%>
-         <main>
-            <h2>Home</h2>
-            <p><%=home%></p>
-         </main>
-<%- include("partials/footer"); -%>
-      
- 
+<body>
+   <div id="container">
+      <%- include("partials/navbar"); -%>
+      <main>
+         <h2>Home</h2>
+         <p><%=home%></p>
+         <% posts.forEach(function(post){ %>
+         <h4 style="color: rgb(99, 16, 16)"><%=post.title%></h4>
+
+         <p>
+            <%=post.content.substring(0,100)+ "..."%>
+            <a href="/posts/<%=post.title%>">Read more</a>
+         </p>
+         <% }) %>
+      </main>
+      <%- include("partials/footer"); -%>
+   </div>
+</body>
